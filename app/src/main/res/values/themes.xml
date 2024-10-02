@@ -1,0 +1,35 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Base application theme. -->
+    <style name="Base.Theme.Careeh" parent="Theme.Material3.Light.NoActionBar">
+
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorOnSecondaryContainer">@color/colorPrimaryDark</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:windowBackground">@color/white</item>
+        <item name="bottomSheetDialogTheme">@style/CustomBottomSheetDialog</item>
+
+        <!--<item name="colorControlNormal">@color/white</item>
+        <item name="drawerArrowStyle">@style/DrawerArrowStyle</item>
+        <item name="alertDialogTheme">@style/AppCompatAlertDialogStyle</item>
+
+        <item name="android:fontFamily">@font/proxima_soft_light</item>-->
+
+    </style>
+
+    <style name="Theme.Careeh" parent="Base.Theme.Careeh" />
+
+    <style name="Style.LightStatusBar" parent="Theme.Material3.Light.NoActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="colorPrimaryDark">@color/colorPrimary</item>
+        <item name="android:windowLightStatusBar" tools:targetApi="23">true</item>
+    </style>
+
+    <style name="Style.WindowLightStatusBar" parent="Theme.Material3.Light.NoActionBar">
+        <item name="android:windowLightStatusBar" tools:targetApi="23">true</item>
+    </style>
+
+
+</resources>

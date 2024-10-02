@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/nav_home"
+        android:enabled="true"
+        android:icon="@drawable/nav_home"
+        android:title="@string/home" />
+
+    <item
+        android:id="@+id/nav_my_orders"
+        android:enabled="true"
+        android:title="@string/my_orders" />
+
+    <item
+        android:id="@+id/nav_cashback"
+        android:enabled="true"
+        android:icon="@drawable/nav_cashback"
+        android:title="@string/cashback" />
+
+</menu>

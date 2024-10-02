@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="colorPrimary">#FFFF6100</color>
+    <color name="colorPrimaryDark">#FFFF6100</color> <!-- #FFDC5502 -->
+    <color name="colorPrimaryUser">#FFFF6100</color>
+    <color name="colorAccent">#FFFF6100</color> <!-- FFED7F3B -->
+    <color name="simpleOffWhite">#FFF4F4F4</color>
+    <color name="black_overlay">#66000000</color>
+    <color name="gray">#FF808080</color>
+    <color name="peach_puff">#FFFFD7BF</color>
+    <color name="medium_gray">#CFCFCF</color>
+    <color name="app_bar_bottom_line">#FEFEFE</color>
+</resources>

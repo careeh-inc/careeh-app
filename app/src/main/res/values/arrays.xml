@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="sample_division">
+        <item>@string/dhaka</item>
+        <item>@string/dhaka</item>
+        <item>@string/dhaka</item>
+    </string-array>
+
+</resources>

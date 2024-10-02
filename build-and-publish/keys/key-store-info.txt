@@ -1,0 +1,3 @@
+Key store password: Careeh@23
+Key Alias: key0
+Key Password: Careeh@23

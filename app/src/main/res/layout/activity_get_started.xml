@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.activity.GetStartedActivity">
+
+    <Button
+        android:id="@+id/btn_skip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_20dp"
+        android:text="@string/skip"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/iv_careeh_logo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginStart="@dimen/_5dp"
+        android:layout_marginTop="@dimen/_20dp"
+        android:layout_marginEnd="@dimen/_5dp"
+        android:layout_marginBottom="@dimen/_5dp"
+        android:contentDescription="@string/careeh_logo"
+        android:src="@drawable/careeh_logo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_skip" />
+
+    <ImageView
+        android:id="@+id/iv_picture_careeh"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_30dp"
+        android:contentDescription="@string/picture_deliver"
+        android:scaleType="centerInside"
+        android:src="@drawable/picture_deliver"
+        app:layout_constraintBottom_toTopOf="@id/btn_get_started"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/iv_careeh_logo" />
+
+    <Button
+        android:id="@+id/btn_get_started"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_30dp"
+        android:layout_marginTop="@dimen/_5dp"
+        android:layout_marginEnd="@dimen/_30dp"
+        android:layout_marginBottom="@dimen/_5dp"
+        android:drawableEnd="@drawable/baseline_arrow_forward_24"
+        android:text="@string/get_started"
+        app:layout_constraintBottom_toTopOf="@+id/tv_login"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_login"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_5dp"
+        android:layout_marginTop="@dimen/_5dp"
+        android:layout_marginEnd="@dimen/_5dp"
+        android:layout_marginBottom="@dimen/_20dp"
+        android:padding="@dimen/_5dp"
+        android:text="@string/already_have_an_account_login"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.activity.MainActivity">
+
+    <!-- Main content -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!-- App bar -->
+        <com.google.android.material.appbar.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="@color/white"
+                android:elevation="@dimen/_15dp"
+                app:menu="@menu/menu_notification"
+                app:navigationContentDescription="@string/user_menu"
+                app:navigationIcon="@drawable/icon_fries_menu">
+
+                <ImageView
+                    android:id="@+id/toolbar_logo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:contentDescription="@string/careeh_logo"
+                    android:src="@drawable/careeh_logo_150" />
+
+            </androidx.appcompat.widget.Toolbar>
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <!-- Fragments will appear here -->
+        <FrameLayout
+            android:id="@+id/fragment_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="?attr/actionBarSize"
+            android:layout_marginBottom="@dimen/curve_nav_height"
+            android:background="@color/white" />
+
+        <!-- Curve Bottom Bar @link https://github.com/Akshay-Katariya/CurveBottomBar -->
+        <com.akshay.library.CurveBottomBar
+            android:id="@+id/curve_bottom_navigation"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/curve_nav_height"
+            android:paddingStart="@dimen/_25dp"
+            android:paddingEnd="@dimen/_25dp"
+            app:backgroundTint="@color/colorPrimary"
+            app:bottomBarColor="@color/simpleOffWhite"
+            app:curveRadius="30dp"
+            app:elevation="@dimen/_5dp"
+            app:itemActiveIndicatorStyle="@color/black"
+            app:itemIconTint="@color/black"
+            app:itemPaddingBottom="@dimen/_20dp"
+            app:itemRippleColor="@color/white"
+            app:labelVisibilityMode="unlabeled"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:menu="@menu/bottom_nav_menu" />
+
+        <!-- FloatingActionButton -->
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fab_order_history"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/_45dp"
+            android:contentDescription="@string/order_history"
+            app:backgroundTint="@color/colorPrimary"
+            app:elevation="@dimen/_15dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:shapeAppearanceOverlay="@style/CircularFabButtonStyle"
+            app:srcCompat="@drawable/outline_order_box_3_line"
+            app:tint="@color/white" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!-- Navigation Drawer -->
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/nav_drawer_view"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:background="@color/white"
+        android:fitsSystemWindows="true"
+        app:drawerLayoutCornerSize="@dimen/_0dp"
+        app:headerLayout="@layout/header_nav_drawer"
+        app:itemIconTint="@color/colorPrimary"
+        app:itemTextAppearance="@style/NavigationViewLabelStyle"
+        app:itemVerticalPadding="@dimen/nav_item_vertical_padding"
+        app:menu="@menu/main_drawer" />
+
+</androidx.drawerlayout.widget.DrawerLayout>

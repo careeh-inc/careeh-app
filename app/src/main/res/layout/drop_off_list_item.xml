@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_1dp"
+        android:layout_marginStart="@dimen/_60dp"
+        android:layout_marginEnd="@dimen/_15dp"
+        android:background="@color/medium_gray" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/pick_up_location"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?android:attr/selectableItemBackground"
+        android:paddingStart="@dimen/_20dp"
+        android:paddingTop="@dimen/_0dp"
+        android:paddingEnd="@dimen/_0dp"
+        android:paddingBottom="@dimen/_0dp">
+
+        <ImageView
+            android:id="@+id/iv_circle"
+            android:layout_width="@dimen/_25dp"
+            android:layout_height="@dimen/_25dp"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:contentDescription="@string/pick_up_location_text"
+            android:padding="@dimen/_5dp"
+            android:src="@drawable/icon_circle_fill"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_drop_off_location"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_15dp"
+            android:layout_marginEnd="@dimen/_15dp"
+            android:text="@string/drop_off_location_text"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/btn_close"
+            app:layout_constraintStart_toEndOf="@+id/iv_circle"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageButton
+            android:id="@+id/btn_close"
+            style="@style/CustomButtonStyle"
+            android:layout_width="@dimen/_55dp"
+            android:layout_height="@dimen/_55dp"
+            android:layout_margin="@dimen/_0dp"
+            android:contentDescription="@string/close"
+            android:padding="@dimen/_18dp"
+            android:src="@drawable/baseline_close_24"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</LinearLayout>

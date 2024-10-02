@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context=".ui.activity.OrderDetailsActivity">
+
+    <!-- App bar -->
+    <include
+        android:id="@+id/appbar"
+        layout="@layout/appbar_title_back" />
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_30dp"
+        android:layout_marginTop="@dimen/_30dp"
+        android:layout_marginEnd="@dimen/_30dp"
+        app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="@dimen/_20dp"
+        app:cardElevation="@dimen/_2dp"
+        app:strokeWidth="@dimen/_0dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingStart="@dimen/_15dp"
+            android:paddingTop="@dimen/_10dp"
+            android:paddingEnd="@dimen/_15dp"
+            android:paddingBottom="@dimen/_10dp">
+
+            <TextView
+                android:id="@+id/tv_pick_up_location"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/_5dp"
+                android:text="@string/dummy_pick_up_location"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_drop_off_location"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/_5dp"
+                android:text="@string/dummy_drop_off_location"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_5dp"
+                android:layout_margin="@dimen/_5dp"
+                android:background="@drawable/horizontal_dotted_line"
+                app:layout_constraintBottom_toBottomOf="@id/tv_pick_up_location"
+                app:layout_constraintEnd_toStartOf="@+id/tv_drop_off_location"
+                app:layout_constraintStart_toEndOf="@+id/tv_pick_up_location"
+                app:layout_constraintTop_toTopOf="@+id/tv_pick_up_location" />
+
+            <TextView
+                android:id="@+id/tv_order_id"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/_5dp"
+                android:text="@string/dummy_order_id"
+                android:textAppearance="@style/TextAppearance.AppCompat.Title"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_pick_up_location" />
+
+            <TextView
+                android:id="@+id/tv_order_status"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/order_status_bg"
+                android:text="@string/order_status_warehouse"
+
+                android:textColor="@color/white"
+                app:layout_constraintBottom_toBottomOf="@id/tv_order_id"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/tv_order_id" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_30dp"
+        android:layout_marginTop="@dimen/_30dp"
+        android:layout_marginEnd="@dimen/_30dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/tracking_package_title"
+                android:textAlignment="viewStart"
+                android:textAppearance="@style/TextAppearance.AppCompat.Title" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/_30_jan_2023_title"
+                android:textAlignment="viewEnd"
+                android:textAppearance="@style/TextAppearance.AppCompat.Title" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_25dp"
+            android:layout_marginBottom="@dimen/_15dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="9:00 pm"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Body2"
+                android:visibility="gone" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/delivered_title"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_15dp"
+            android:layout_marginBottom="@dimen/_15dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="9:00 pm"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Body2" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Rider departured with parcel"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_15dp"
+            android:layout_marginBottom="@dimen/_15dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="9:00 pm"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Body2" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Processed at warehouse"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_15dp"
+            android:layout_marginBottom="@dimen/_15dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="9:00 pm"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Body2" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Shipped to warehouse"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

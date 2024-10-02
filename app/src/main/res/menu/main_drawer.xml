@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_profile"
+            android:icon="@drawable/outline_person_24"
+            android:title="@string/profile" />
+        <item
+            android:id="@+id/nav_my_orders"
+            android:icon="@drawable/outline_box_linear_24"
+            android:title="@string/my_orders" />
+        <item
+            android:id="@+id/nav_wallet"
+            android:icon="@drawable/outline_wallet_24"
+            android:title="@string/wallet" />
+        <item
+            android:id="@+id/nav_manage"
+            android:icon="@drawable/outline_driver_24"
+            android:title="@string/my_drivers" />
+        <item
+            android:id="@+id/nav_help_center"
+            android:icon="@drawable/outline_round_help_24"
+            android:title="@string/help_center" />
+        <item
+            android:id="@+id/nav_settings"
+            android:icon="@drawable/line_settings_24"
+            android:title="@string/settings" />
+    </group>
+
+    <group
+        android:id="@+id/menu_bottom"
+        android:checkableBehavior="none">
+        <item
+            android:id="@+id/nav_logout"
+            android:icon="@drawable/outline_logout_24"
+            android:title="@string/log_out" />
+    </group>
+
+</menu>

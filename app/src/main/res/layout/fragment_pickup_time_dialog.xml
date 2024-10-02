@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bottom_sheet_back">
+
+    <LinearLayout
+        android:id="@+id/bottom_sheet"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_30dp"
+        android:orientation="vertical"
+        app:layout_behavior="android.support.design.widget.BottomSheetBehavior">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/_10dp"
+            android:text="@string/pick_up_time"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <com.google.android.material.chip.ChipGroup
+            android:id="@+id/chip_group_pick_time"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:checkedChip="@id/pick_now_chip"
+            app:selectionRequired="true"
+            app:singleSelection="true">
+
+            <!-- style="@style/Widget.MaterialComponents.Chip.Choice" -->
+            <com.google.android.material.chip.Chip
+                android:id="@+id/pick_now_chip"
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:text="@string/now"
+                android:textAppearance="@style/ChipTextStyle"
+                app:chipBackgroundColor="@color/white"
+                app:chipIcon="@drawable/icon_spinners_clock_now"
+                app:chipIconEnabled="true"
+                app:chipIconVisible="true"
+                app:chipStartPadding="@dimen/_20dp"
+                app:chipStrokeColor="@color/chip_stroke_color"
+                app:chipStrokeWidth="@dimen/_1dp" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/pick_later_chip"
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:text="@string/later"
+                android:textAppearance="@style/ChipTextStyle"
+                app:chipBackgroundColor="@color/white"
+                app:chipIcon="@drawable/icon_timer_clock_later"
+                app:chipIconEnabled="true"
+                app:chipIconVisible="true"
+                app:chipStartPadding="@dimen/_20dp"
+                app:chipStrokeColor="@color/chip_stroke_color"
+                app:chipStrokeWidth="@dimen/_1dp" />
+
+        </com.google.android.material.chip.ChipGroup>
+
+        <LinearLayout
+            android:id="@+id/pick_later_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10dp"
+                android:text="@string/choose_date_title"
+                android:textSize="@dimen/_16sp"
+                android:textStyle="bold" />
+
+            <DatePicker
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:calendarViewShown="false"
+                android:datePickerMode="spinner" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10dp"
+                android:text="@string/choose_time_title"
+                android:textSize="@dimen/_16sp"
+                android:textStyle="bold" />
+
+            <TimePicker
+                android:id="@+id/time_picker"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_20dp"
+                android:timePickerMode="spinner" />
+
+            <Button
+                android:id="@+id/date_time_set"
+                style="@style/Widget.Material3.Button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/colorPrimary"
+                android:text="@string/schedule_text"
+                android:textColor="@color/white" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.core.widget.NestedScrollView>

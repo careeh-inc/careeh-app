@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Careeh"
+        tools:targetApi="34">
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/map_api_key" />
+
+        <!--<activity
+            android:name=".ui.activity.NotificationsActivity"
+            android:exported="true"
+            android:theme="@style/Style.LightStatusBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>-->
+        <activity
+            android:name=".ui.activity.NotificationsActivity"
+            android:theme="@style/Style.LightStatusBar"
+            android:exported="false" />
+        <activity
+            android:name=".ui.activity.OrderDetailsActivity"
+            android:exported="false"
+            android:theme="@style/Style.LightStatusBar" />
+        <activity
+            android:name=".ui.activity.MyOrdersActivity"
+            android:exported="false"
+            android:theme="@style/Style.LightStatusBar" />
+        <activity
+            android:name=".ui.activity.ProfileActivity"
+            android:exported="false"
+            android:theme="@style/Style.LightStatusBar" />
+        <activity
+            android:name=".ui.activity.DrawerActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.activity.ConfirmLocationActivity"
+            android:exported="false"
+            android:theme="@style/Style.LightStatusBar" />
+        <activity
+            android:name=".ui.activity.SearchLocationActivity"
+            android:exported="false"
+            android:theme="@style/Style.LightStatusBar" />
+        <activity
+            android:name=".ui.activity.MainActivity"
+            android:exported="false"
+            android:theme="@style/Style.LightStatusBar" />
+        <activity
+            android:name=".ui.activity.ResetPasswordActivity"
+            android:exported="false"
+            android:theme="@style/Style.LightStatusBar" />
+        <activity
+            android:name=".ui.activity.ConfirmOtpActivity"
+            android:exported="false"
+            android:theme="@style/Style.LightStatusBar" />
+        <activity
+            android:name=".ui.activity.ForgotPasswordActivity"
+            android:exported="false"
+            android:theme="@style/Style.LightStatusBar" />
+        <activity
+            android:name=".ui.activity.LoginActivity"
+            android:exported="false"
+            android:theme="@style/Style.LightStatusBar" />
+        <activity
+            android:name=".ui.activity.BusinessRegisterActivity"
+            android:exported="false"
+            android:theme="@style/Style.LightStatusBar" />
+        <activity
+            android:name=".ui.activity.PersonalRegisterActivity"
+            android:exported="false"
+            android:theme="@style/Style.LightStatusBar" />
+        <activity
+            android:name=".ui.activity.SelectAccountActivity"
+            android:exported="false"
+            android:theme="@style/Style.LightStatusBar" />
+        <activity
+            android:name=".ui.activity.GetStartedActivity"
+            android:exported="false"
+            android:theme="@style/Style.LightStatusBar" />
+        <activity
+            android:name=".ui.activity.StartUsingActivity"
+            android:exported="false"
+            android:theme="@style/Style.LightStatusBar" />
+        <activity
+            android:name=".ui.activity.SplashUi"
+            android:exported="true"
+            android:theme="@style/Style.LightStatusBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

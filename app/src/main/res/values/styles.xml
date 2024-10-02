@@ -1,0 +1,119 @@
+<resources>
+
+    <style name="Widget.Theme.Careeh.ActionBar.Fullscreen" parent="Widget.AppCompat.ActionBar">
+        <item name="android:background">@color/black_overlay</item>
+    </style>
+
+    <style name="Widget.Theme.Careeh.ButtonBar.Fullscreen" parent="">
+        <item name="android:background">@color/black_overlay</item>
+        <item name="android:buttonBarStyle">?android:attr/buttonBarStyle</item>
+    </style>
+
+    <style name="AccountTypeButtonStyle">
+        <item name="android:layout_marginTop">@dimen/_30dp</item>
+        <item name="android:layout_marginBottom">@dimen/_30dp</item>
+        <item name="android:focusable">true</item>
+        <item name="android:clickable">true</item>
+        <item name="android:gravity">center</item>
+        <item name="android:background">@drawable/gray_rad_border</item>
+        <item name="android:orientation">vertical</item>
+    </style>
+
+    <style name="SuggestionButtonStyle">
+        <item name="android:background">@drawable/suggestion_item_effect</item>
+        <item name="android:focusable">true</item>
+        <item name="android:clickable">true</item>
+        <item name="cornerRadius">@dimen/_10dp</item>
+    </style>
+
+    <style name="AvailableVehicleItemStyle">
+        <item name="android:focusable">true</item>
+        <item name="android:clickable">true</item>
+        <item name="android:elevation">3dp</item>
+        <item name="android:background">@drawable/avail_vehicle_item_effect</item>
+    </style>
+
+    <style name="TextInputLayoutStyle" parent="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginStart">@dimen/_30dp</item>
+        <item name="android:layout_marginEnd">@dimen/_30dp</item>
+    </style>
+
+    <style name="TextInputLayoutDropdownStyle" parent="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginStart">@dimen/_30dp</item>
+        <item name="android:layout_marginEnd">@dimen/_30dp</item>
+    </style>
+
+    <style name="CircularImageView">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">50%</item>
+    </style>
+
+    <style name="BorderRadiusImageView">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">20%</item>
+        <item name="android:padding">@dimen/_20dp</item>
+    </style>
+
+    <style name="NavigationViewLabelStyle" parent="@android:style/TextAppearance">
+        <item name="android:textSize">@dimen/_16sp</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+
+    <style name="CircularFabButtonStyle">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">50%</item>
+    </style>
+
+    <style name="ChipTextStyle" parent="@style/TextAppearance.MaterialComponents.Chip">
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="CustomBottomSheetDialog" parent="@style/ThemeOverlay.MaterialComponents.BottomSheetDialog">
+        <item name="bottomSheetStyle">@style/CustomBottomSheet</item>
+    </style>
+
+    <style name="CustomBottomSheet" parent="Widget.MaterialComponents.BottomSheet">
+        <item name="shapeAppearanceOverlay">@style/CustomShapeAppearanceBottomSheetDialog</item>
+    </style>
+
+    <style name="CustomShapeAppearanceBottomSheetDialog" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSizeTopRight">16dp</item>
+        <item name="cornerSizeTopLeft">16dp</item>
+        <item name="cornerSizeBottomRight">0dp</item>
+        <item name="cornerSizeBottomLeft">0dp</item>
+    </style>
+
+    <style name="ShapeAppearance.App.LargeComponent" parent="ShapeAppearance.Material3.LargeComponent">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">24dp</item>
+    </style>
+
+    <style name="CustomButtonStyle">
+        <item name="android:focusable">true</item>
+        <item name="android:clickable">true</item>
+        <item name="android:background">?android:attr/selectableItemBackground</item>
+    </style>
+
+    <style name="ModalBottomSheetDialog" parent="Widget.Material3.BottomSheet.Modal">
+        <!--<item name="shapeAppearance">@style/ShapeAppearance.App.LargeComponent</item>-->
+        <item name="behavior_fitToContents">true</item>
+        <item name="behavior_peekHeight">70dp</item>
+        <item name="behavior_hideable">false</item>
+        <item name="android:colorBackground">@android:color/transparent</item>
+    </style>
+
+    <style name="ModalBottomSheetDialog1" parent="Widget.Material3.BottomSheet.Modal">
+        <item name="shapeAppearance">@style/ShapeAppearance.App.LargeComponent</item>
+        <item name="shapeAppearanceOverlay">@style/ShapeAppearance.App.LargeComponent</item>
+        <item name="behavior_fitToContents">true</item>
+        <item name="behavior_peekHeight">70dp</item>
+        <item name="behavior_hideable">false</item>
+        <item name="android:colorBackground">@android:color/transparent</item>
+    </style>
+
+</resources>

@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.activity.SelectAccountActivity">
+
+    <Button
+        android:id="@+id/btn_skip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_20dp"
+        android:text="@string/skip"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/iv_select_account"
+        android:layout_width="match_parent"
+        android:layout_height="350dp"
+        android:layout_centerInParent="true"
+        android:layout_margin="@dimen/_20dp"
+        android:contentDescription="@string/select_account"
+        android:src="@drawable/select_account"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_skip" />
+
+    <LinearLayout
+        android:id="@+id/ll_account_type_hints"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_20dp"
+        android:layout_marginEnd="@dimen/_20dp"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@id/ll_account_type"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/iv_select_account">
+
+        <TextView
+            android:id="@+id/tv_select_ac_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_5dp"
+            android:text="@string/select_account_text"
+            android:textAlignment="center"
+            android:textSize="@dimen/_20sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tv_delivery_type"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_5dp"
+            android:text="@string/delivery_type_text"
+            android:textAlignment="center" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_account_type"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:baselineAligned="false"
+        android:orientation="horizontal"
+        android:weightSum="2"
+        app:layout_constraintBottom_toTopOf="@+id/tv_login"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ll_account_type_hints">
+
+        <LinearLayout
+            android:id="@+id/ac_individual"
+            style="@style/AccountTypeButtonStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_30dp"
+            android:layout_marginEnd="@dimen/_15dp"
+            android:layout_weight="1">
+
+            <ImageView
+                android:layout_width="@dimen/_68dp"
+                android:layout_height="@dimen/_68dp"
+                android:layout_margin="@dimen/_15dp"
+                android:contentDescription="@string/individual_logo"
+                android:padding="@dimen/_2dp"
+                android:src="@drawable/individual_logo" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/_2dp"
+                android:text="@string/individual"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/_5dp"
+                android:text="@string/individual_des"
+                android:textAlignment="center" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ac_business"
+            style="@style/AccountTypeButtonStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="30dp"
+            android:layout_weight="1">
+
+            <ImageView
+                android:layout_width="@dimen/_68dp"
+                android:layout_height="@dimen/_68dp"
+                android:layout_margin="@dimen/_15dp"
+                android:contentDescription="@string/business_logo"
+                android:padding="@dimen/_2dp"
+                android:src="@drawable/business_logo" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/_2dp"
+                android:text="@string/business"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/_5dp"
+                android:text="@string/business_text"
+                android:textAlignment="center" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_login"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_5dp"
+        android:layout_marginEnd="@dimen/_5dp"
+        android:layout_marginBottom="@dimen/_20dp"
+        android:padding="@dimen/_5dp"
+        android:text="@string/already_have_an_account_login"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

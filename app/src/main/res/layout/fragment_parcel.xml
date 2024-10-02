@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".ui.fragment.ParcelFragment">
+
+    <!-- Main container -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <!-- Slider image -->
+        <com.denzcoskun.imageslider.ImageSlider
+            android:id="@+id/image_slider"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:padding="@dimen/_25dp"
+            app:iss_auto_cycle="true"
+            app:iss_corner_radius="30"
+            app:iss_delay="1500"
+            app:iss_period="1500"
+            app:iss_placeholder="@drawable/slider_image_1"
+            app:iss_text_align="CENTER" />
+
+        <!-- User location information -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_30dp"
+            android:layout_marginTop="@dimen/_5dp"
+            android:layout_marginEnd="@dimen/_30dp"
+            android:gravity="center_vertical"
+            android:padding="@dimen/_2dp">
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:contentDescription="@string/your_location_title"
+                android:src="@drawable/icon_location" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingStart="@dimen/_10dp"
+                android:paddingEnd="@dimen/_10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/your_location_title" />
+
+                <TextView
+                    android:id="@+id/user_location_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/dummy_location"
+                    android:textSize="@dimen/_18sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_30dp"
+            android:layout_marginTop="@dimen/_20dp"
+            android:layout_marginEnd="@dimen/_30dp"
+            android:layout_marginBottom="@dimen/_20dp"
+            app:cardBackgroundColor="#FFFFFF"
+            app:cardCornerRadius="@dimen/_20dp"
+            app:cardElevation="@dimen/_5dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <!-- android:layout_margin="@dimen/_50dp" -->
+                <View
+                    android:id="@+id/view_pick_up"
+                    android:layout_width="2dp"
+                    android:layout_height="0dp"
+                    android:layout_marginStart="32dp"
+                    android:layout_marginTop="@dimen/_25dp"
+                    android:layout_marginBottom="32dp"
+                    android:background="@drawable/dotted_line"
+                    app:layout_constraintBottom_toTopOf="@+id/btn_add_stop"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/pick_up_location"
+                    style="@style/CustomButtonStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="@dimen/_20dp"
+                    android:paddingTop="@dimen/_0dp"
+                    android:paddingEnd="@dimen/_0dp"
+                    android:paddingBottom="@dimen/_0dp"
+                    app:layout_constraintStart_toEndOf="@+id/view_pick_up"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <ImageView
+                        android:id="@+id/iv_circle"
+                        android:layout_width="26dp"
+                        android:layout_height="@dimen/_25dp"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="@dimen/_10dp"
+                        android:layout_weight="1"
+                        android:contentDescription="@string/pick_up_location_text"
+                        android:padding="@dimen/_5dp"
+                        android:src="@drawable/icon_circle_fill"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_15dp"
+                        android:layout_marginEnd="@dimen/_0dp"
+                        android:text="@string/pick_up_location_text"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@+id/btn_select_schedule"
+                        app:layout_constraintStart_toEndOf="@+id/iv_circle"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/btn_select_schedule"
+                        style="@style/CustomButtonStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:drawablePadding="@dimen/_5dp"
+                        android:padding="@dimen/_20dp"
+                        android:text="@string/now"
+                        app:drawableEndCompat="@drawable/down_arrow"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv_drop_off_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintBottom_toTopOf="@id/drop_off_location"
+                    app:layout_constraintTop_toBottomOf="@id/pick_up_location"
+                    tools:itemCount="4"
+                    tools:listitem="@layout/drop_off_list_item" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_1dp"
+                    android:layout_marginStart="@dimen/_60dp"
+                    android:layout_marginEnd="@dimen/_15dp"
+                    android:background="@color/medium_gray"
+                    app:layout_constraintBottom_toTopOf="@+id/drop_off_location"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/drop_off_location"
+                    style="@style/CustomButtonStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:paddingStart="@dimen/_20dp"
+                    android:paddingTop="@dimen/_0dp"
+                    android:paddingEnd="@dimen/_0dp"
+                    android:paddingBottom="@dimen/_0dp"
+                    app:layout_constraintTop_toBottomOf="@+id/rv_drop_off_view">
+
+                    <ImageView
+                        android:id="@+id/iv_stop_location"
+                        android:layout_width="26dp"
+                        android:layout_height="@dimen/_25dp"
+                        android:layout_gravity="center"
+                        android:contentDescription="@string/drop_off_location_text"
+                        android:padding="@dimen/_5dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/icon_location_fill"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/drop_off_location_text"
+                        android:layout_marginStart="@dimen/_15dp"
+                        android:layout_marginEnd="@dimen/_0dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@+id/invisible_now"
+                        app:layout_constraintStart_toEndOf="@+id/iv_stop_location"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/invisible_now"
+                        style="@style/CustomButtonStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:drawablePadding="@dimen/_5dp"
+                        android:padding="@dimen/_20dp"
+                        android:text="@string/now"
+                        android:visibility="invisible"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_1dp"
+                    android:background="@color/medium_gray"
+                    app:layout_constraintBottom_toTopOf="@+id/btn_add_stop" />
+
+                <LinearLayout
+                    android:id="@+id/btn_add_stop"
+                    style="@style/CustomButtonStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/_15dp"
+                    app:layout_constraintTop_toBottomOf="@+id/drop_off_location">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:drawablePadding="@dimen/_5dp"
+                        android:text="@string/add_stop"
+                        android:textStyle="bold"
+                        app:drawableStartCompat="@drawable/icon_plus" />
+
+                </LinearLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_30dp"
+            android:layout_marginEnd="@dimen/_30dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/available_vehicle_title"
+                android:textSize="@dimen/_18sp"
+                android:textStyle="bold" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_available_vehicle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5dp"
+                android:layout_marginBottom="@dimen/_20dp"
+                android:padding="@dimen/_2dp"
+                tools:itemCount="3"
+                tools:listitem="@layout/available_vehicles_list_item" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.core.widget.NestedScrollView>

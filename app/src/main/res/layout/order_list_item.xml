@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="@dimen/_10dp"
+    android:layout_marginTop="@dimen/_5dp"
+    android:layout_marginEnd="@dimen/_10dp"
+    android:layout_marginBottom="@dimen/_5dp"
+    android:clickable="true"
+    android:focusable="true"
+    app:cardBackgroundColor="@color/white"
+    app:cardCornerRadius="@dimen/_20dp"
+    app:cardElevation="@dimen/_2dp"
+    app:strokeWidth="@dimen/_0dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/_12dp">
+
+        <ImageView
+            android:id="@+id/iv_order_box"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/ep_box_icon"
+            android:src="@drawable/outline_ep_box_bg"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_order_id"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/_5dp"
+            android:text="@string/dummy_order_id"
+            android:textAppearance="@style/TextAppearance.AppCompat.Title"
+            app:layout_constraintEnd_toStartOf="@id/tv_date"
+            app:layout_constraintStart_toEndOf="@+id/iv_order_box"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/_5dp"
+            android:text="@string/dummy_date"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_pick_up_location"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/_5dp"
+            android:text="@string/dummy_pick_up_location"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/iv_order_box" />
+
+        <TextView
+            android:id="@+id/tv_drop_off_location"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/_5dp"
+            android:text="@string/dummy_drop_off_location"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_5dp"
+            android:layout_margin="@dimen/_5dp"
+            android:background="@drawable/horizontal_dotted_line"
+            app:layout_constraintBottom_toBottomOf="@id/tv_pick_up_location"
+            app:layout_constraintEnd_toStartOf="@+id/tv_drop_off_location"
+            app:layout_constraintStart_toEndOf="@+id/tv_pick_up_location"
+            app:layout_constraintTop_toTopOf="@+id/tv_pick_up_location" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>
